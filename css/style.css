@@ -1,0 +1,316 @@
+:root {
+    --main-color: #f25454;
+    --secondary-color: #F2F2F2;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Start Component */
+.main-heading {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    position: relative;
+}
+.main-heading h2 {
+    font-size: 72px;
+    color: rgba(40, 40, 40, 0.8);
+    opacity: 0.3;
+
+}
+.main-heading h3 {
+    color: #282828;
+    font-size: 38px;
+    font-weight: 700;
+    align-self: flex-end;
+}
+
+.main-heading::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #282828;
+    bottom: 0;
+    left: 50;
+    transition: 0.7s ease;
+}
+
+.main-heading:hover::after {
+    width: 80px;
+}
+
+.main-heading + p {
+    color: #999;
+    padding-bottom: 40px;
+}
+/* End Component */
+
+/* Start Nav */
+#nav .navbar-nav li a, #nav .icons svg {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.7s ease;
+}
+
+#nav .navbar-nav li a:hover , #nav .icons svg:hover ,#nav .navbar-nav li a.active {
+    color: var(--main-color);
+}
+
+.navbar-light .navbar-toggler {
+    color: transparent;
+    border: none;
+}
+/* End Nav */
+/* Start Header */
+#header .carousel-item h1 {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 700;
+    color: white;
+}
+
+/* End Header */
+/* Start About */
+#about .info p {
+    font-size: 14px;
+    color: #666;
+}
+
+#about .progress {
+    height: 0.25rem;
+    overflow: visible;
+}
+
+#about .progress-bar {
+    background-color: var(--main-color);
+    position: relative;
+    overflow: visible;
+}
+
+#about .progress-bar::before {
+    content: attr(aria-valuenow);
+    position: absolute;
+    color: black;
+    right: 0;
+    top: -20px;
+    font-size: 12px;
+    font-weight: 400;
+}
+/* End About */
+/* Start Team */
+#team .member h6 {
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.7s ease;
+}
+
+#team .member:hover h6 {
+    color: var(--main-color);
+}
+
+#team .member p {
+    font-size: 14px;
+}
+
+#team .member .image {
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 997px) {
+    #team .member .image {
+        position: relative;
+        overflow: hidden;
+        width: 50%;
+        margin: auto;
+    }
+}
+
+#team .member .member-overlay {
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-color);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.7s ease;
+}
+#team .member .member-overlay .icons svg {
+    color: white;
+}
+
+#team .member .image:hover .member-overlay {
+    opacity: 0.8;
+}
+
+#team .member .image img {
+    transition: 0.7s ease;
+}
+
+#team .member .image:hover img {
+    transform: scale(1.1);
+}
+
+#team .ideas-content p {
+    font-size: 32px;
+    font-weight: 400;
+    color: #282828;
+}
+
+#team .ideas-content button {
+    color: white;
+    background-color: var(--main-color);
+}
+/* End Team */
+/* Start Services */
+#services {
+    background-color: #fafafa;
+}
+
+#services .serv .serv-ico svg {
+    color: var(--main-color);
+    font-size: 24px;
+}
+
+#services .serv .serv-content h6 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: 0.5s ease;
+}
+
+#services .serv:hover h6 {
+    color: var(--main-color);
+}
+/* End Services */
+/* Start Client */
+#client .carousel-item img {
+    width: 12%;
+    border-radius: 50%;
+}
+
+#client .carousel-caption {
+    position: static;
+}
+
+#client .carousel-caption p {
+    width: 50%;
+    margin: auto;
+    font-size: 25px;
+    color: #666;
+}
+
+#client .carousel-indicators [data-bs-target] {
+    background-color: var(--main-color);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    #client .carousel-indicators [data-bs-target] {
+        display: none;
+    }
+
+    #client .carousel-item img {
+        width: 30%;
+    }
+}
+/* End Client */
+/* Start Contact */
+#contact {
+    background-color: #fafafa;
+}
+
+#contact .address .ico svg {
+    color: var(--main-color);
+    font-size: 32px;
+}
+
+#contact .address .info h6 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+#contact .form-control:focus {
+    border-color: var(--main-color);
+    border-width: 3px;
+    box-shadow: none;
+}
+
+#contact .btn {
+    background-color: var(--main-color);
+    color: #fff;
+}
+/* End Contact */
+/* Start Footer */
+#footer {
+    background-color: #222;
+    background-image: url(../images/dotted-map.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+#footer a, #footer .contact p {
+    color: #b0b0b0;
+    transition: 0.7s ease;
+}
+
+#footer a:hover {
+    color: var(--main-color);
+}
+
+#footer .tags a:hover {
+    border:2px solid var(--main-color);
+}
+
+#footer .tags a {
+    padding: 6px 10px;
+    margin: 5px;
+    display: inline-block;
+    border: 2px solid #b0b0b0;
+}
+
+#footer .top-ico a svg {
+    padding: 15px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: 0.7s ease;
+}
+
+#footer .top-ico svg:hover {
+    opacity: 1;
+}
+
+.footer-links {
+    background-color: #1a1a1a;
+}
+
+.footer-links a {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.7s ease;
+}
+
+.footer-links a:hover {
+    color: var(--main-color);
+}
+
+.footer-links p {
+    color: #666;
+}
+/* End Footer */
